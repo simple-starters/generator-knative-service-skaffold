@@ -1,0 +1,16 @@
+---
+actions:
+  to: kubernetes/knative-service.yaml
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: {{artifactId}}
+spec:
+  template:
+    spec:
+      containers:
+      - image: {{artifactId}}:{{artifactVersion}}
+        env:
+        - name: TARGET
+          value: "Tanzu"

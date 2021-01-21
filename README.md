@@ -1,6 +1,6 @@
 # Simple generator for web applications providing a Knative service.yaml file
 
-This generator uses a provided Knative `service.yaml` resource file to deploy a web application as a Knative service using Skaffold with the generated `skaffold.yaml`
+This generator uses a Knative `service.yaml` resource file to deploy a web application as a Knative service using Skaffold with the generated `skaffold.yaml`
 
 You will need to install the following command line tool:
 
@@ -57,6 +57,7 @@ skaffold delete
 
 ## Generator
 
-`k8s-simple new` creates
+`knative new` creates
 
+* A `kubernetes/knative-service.yaml` file
 * A `skaffold.yaml` file
