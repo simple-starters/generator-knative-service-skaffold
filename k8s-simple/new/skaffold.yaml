@@ -1,0 +1,15 @@
+---
+actions:
+  to: skaffold.yaml
+---
+apiVersion: skaffold/v2beta6
+kind: Config
+metadata:
+  name: {{artifactId}}
+build:
+  artifacts:
+  - image: {{artifactId}}
+deploy:
+  kubectl:
+    manifests:
+    - service.yaml
